@@ -1,18 +1,18 @@
-#ifndef WARRIOR_H
-#define WARRIOR_H
+#ifndef PRIEST_H
+#define PRIEST_H
 #include"Player.h"
 #include<iostream>
 
-class Warrior : public Player {
+class Priest : public Player {
 public:
-	Warrior(std::string name, Race race, int hitPoints, int magicPoints) {
+	Priest(std::string name, Race race, int hitPoints, int magicPoints) {
 		this->name = name;
 		this->race = race;
 		this->hitPoints = hitPoints;
 		this->magicPoints = magicPoints;
 	}
 	std::string attack() {
-		return "I will destroy you with my sword, foul demon!";
+		return "I will assault you with holy wrath!";
 	}
 private:
 	std::string name;

@@ -3,10 +3,11 @@
 
 #include<string>
 
-enum Race{HUMAN, ELF, DWARF, ORC, TROLL};
+enum class Race{HUMAN, ELF, DWARF, ORC, TROLL};
 
 class Player {
 public:
+	Player();
 	Player(std::string name, Race race, int hitPoints, int magicPoints);
 	std::string getName();
 	Race getRace();
@@ -22,7 +23,7 @@ private:
 	std::string name;
 	Race race;
 	int hitPoints;
-	int MagicPoints;
+	int magicPoints;
 };
 
 #endif
