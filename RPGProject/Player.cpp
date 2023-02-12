@@ -2,7 +2,6 @@
 #include<string>
 
 Player::Player() {
-
 }
 Player::Player(std::string name, Race race, int hitPoints, int magicPoints) {
 	this->name = name;
