@@ -1,41 +1,39 @@
 #include"Player.h"
 #include<string>
 
-Player::Player() {
-}
 Player::Player(std::string name, Race race, int hitPoints, int magicPoints) {
 	this->name = name;
 	this->race = race;
 	this->hitPoints = hitPoints;
 	this->magicPoints = magicPoints;
 }
-std::string Player::getName() {
+std::string Player::getName() const {
 	return name;
 }
-Race Player::getRace() {
+Race Player::getRace() const{
 	return race;
 }
-std::string Player::whatRace() {
+std::string Player::whatRace() const {
 	if (race == Race::HUMAN){
 		return "Human";
 	}
-	if (race == Race::ELF) {
+	else if (race == Race::ELF) {
 		return "Elf";
 	}
-	if (race == Race::DWARF) {
+	else if (race == Race::DWARF) {
 		return "Dwarf";
 	}
-	if (race == Race::ORC) {
+	else if (race == Race::ORC) {
 		return "Orc";
 	}
-	if (race == Race::TROLL) {
+	else if (race == Race::TROLL) {
 		return "Troll";
 	}
 }
-int Player::getHitPoints() {
+int Player::getHitPoints() const {
 	return hitPoints;
 }
-int Player::getMagicPoints() {
+int Player::getMagicPoints() const {
 	return magicPoints;
 }
 void Player::setName(std::string name) {

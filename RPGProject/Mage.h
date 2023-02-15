@@ -5,20 +5,11 @@
 
 class Mage : public Player {
 public:
-	Mage(std::string name, Race race, int hitPoints, int magicPoints) {
-		this->name = name;
-		this->race = race;
-		this->hitPoints = hitPoints;
-		this->magicPoints = magicPoints;
+	Mage(std::string name, Race race) : Player(name, race, 100, 200) {
 	}
-	std::string attack() {
+	std::string attack() const {
 		return "I will crush you with the power of my arcane missile!";
 	}
-private:
-	std::string name;
-	Race race;
-	int hitPoints;
-	int magicPoints;
 };
 
 #endif

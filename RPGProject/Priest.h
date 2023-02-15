@@ -5,20 +5,11 @@
 
 class Priest : public Player {
 public:
-	Priest(std::string name, Race race, int hitPoints, int magicPoints) {
-		this->name = name;
-		this->race = race;
-		this->hitPoints = hitPoints;
-		this->magicPoints = magicPoints;
+	Priest(std::string name, Race race) : Player(name, race, 150, 150) {
 	}
-	std::string attack() {
+	std::string attack() const {
 		return "I will assault you with holy wrath!";
 	}
-private:
-	std::string name;
-	Race race;
-	int hitPoints;
-	int magicPoints;
 };
 
 #endif
